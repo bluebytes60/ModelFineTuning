@@ -1,4 +1,6 @@
 .claude/
+claude.md
+CLAUDE.md
 ministral-poem-lora/
 __pycache__/
 *.pyc

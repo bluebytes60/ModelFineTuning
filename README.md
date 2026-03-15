@@ -18,7 +18,8 @@ Note: `mixed` class is absent from validation and test splits.
 | Model | Test Accuracy |
 |---|---|
 | Naive Bayes (TF-IDF) | 66.35% |
-| Naive Bayes (BoW, no TF-IDF) | 67.31% |
+| Naive Bayes (TF-IG) | 66.35% |
+| Naive Bayes (BoW only) | 67.31% |
 | Ministral-3-8B zero-shot | 54.81% |
 | **Ministral-3-8B QLoRA fine-tuned** | **80.77%** |
 
