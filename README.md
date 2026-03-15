@@ -43,7 +43,6 @@ Hardware: NVIDIA RTX 4090 (24GB VRAM)
 
 - [`naiveBayes.ipynb`](naiveBayes.ipynb) — Naive Bayes baselines
 - [`mistral_finetune.ipynb`](mistral_finetune.ipynb) — Zero-shot evaluation + QLoRA fine-tuning
-- [`dspy_autoprompt.ipynb`](dspy_autoprompt.ipynb) — DSPy auto prompt optimization (BootstrapFewShot + MIPROv2)
-- [`dspy_evaluation.ipynb`](dspy_evaluation.ipynb) — Evaluation of optimized DSPy programs
+- [`dspy_autoprompt.ipynb`](dspy_autoprompt.ipynb) — DSPy auto prompt optimization (BootstrapFewShot + MIPROv2) and evaluation
 
 Optimized DSPy programs saved in [`dspy_optimized/`](dspy_optimized/).
