@@ -17,7 +17,7 @@ Note: `mixed` class is absent from validation and test splits.
 
 | Model | Test Accuracy |
 |---|---|
-| Ministral-3-8B zero-shot (hand-crafted few-shot) | 54.81% |
+| Ministral-3-8B few-shot (hand-crafted few-shot) | 54.81% |
 | Naive Bayes (TF-IDF) | 66.35% |
 | Naive Bayes (TF-IG) | 66.35% |
 | Naive Bayes (BoW only) | 67.31% |
