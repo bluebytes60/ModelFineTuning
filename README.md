@@ -28,7 +28,7 @@ Note: `mixed` class is absent from validation and test splits.
 ## Key Observations
 
 - **Naive Bayes** predicts almost exclusively `no_impact` (the majority class at 66%), which explains the deceptively high baseline accuracy.
-- **Zero-shot Ministral-3-8B** scores below the Naive Bayes baseline (54.81%) — the base model is not instruction-tuned, so few-shot prompting alone is insufficient for this task.
+- **Zero-shot Ministral-3-8B** scores below the Naive Bayes baseline (54.81%) — the base model is not instruction-tuned, the value represents the value prior to any optimization
 - **DSPy BootstrapFewShot** automatically selects few-shot demos from the training set, improving over hand-crafted zero-shot by +14pp (69.23%) and beating Naive Bayes.
 - **DSPy MIPROv2** jointly optimizes both the instruction text and demonstrations via Bayesian search, reaching 75.96% — a further +6pp over BFS and +21pp over the hand-crafted baseline.
 - **QLoRA fine-tuning** (5 epochs, LoRA rank=16) still leads at **80.77%**, showing that weight updates outperform prompt optimization alone for this task.
