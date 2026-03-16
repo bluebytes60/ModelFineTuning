@@ -28,8 +28,8 @@ Note: `mixed` class is absent from validation and test splits.
 ## Key Observations
 
 - **Naive Bayes** predicts almost exclusively `no_impact` (the majority class at 66%), which explains the deceptively high baseline accuracy.
-- **Zero-shot Ministral-3-8B** scores below the Naive Bayes baseline (54.81%) — the base model is not instruction-tuned, the value represents the value prior to any optimization
-- **DSPy BootstrapFewShot** automatically selects few-shot demos from the training set, improving over hand-crafted zero-shot by +14pp (69.23%) and beating Naive Bayes.
+- **Few-shot Ministral-3-8B** scores below the Naive Bayes baseline (54.81%) — the base model is not instruction-tuned, the value represents the value prior to any optimization
+- **DSPy BootstrapFewShot** automatically selects few-shot demos from the training set, improving over hand-crafted few-shot by +14pp (69.23%) and beating Naive Bayes.
 - **DSPy MIPROv2** jointly optimizes both the instruction text and demonstrations via Bayesian search, reaching 75.96% — a further +6pp over BFS and +21pp over the hand-crafted baseline.
 - **QLoRA fine-tuning** (5 epochs, LoRA rank=16) still leads at **80.77%**, showing that weight updates outperform prompt optimization alone for this task.
 
@@ -42,7 +42,7 @@ Hardware: NVIDIA RTX 4090 (24GB VRAM)
 ## Notebooks
 
 - [`naiveBayes.ipynb`](naiveBayes.ipynb) — Naive Bayes baselines
-- [`mistral_finetune.ipynb`](mistral_finetune.ipynb) — Zero-shot evaluation + QLoRA fine-tuning
+- [`mistral_finetune.ipynb`](mistral_finetune.ipynb) — Few-shot evaluation + QLoRA fine-tuning
 - [`dspy_autoprompt.ipynb`](dspy_autoprompt.ipynb) — DSPy auto prompt optimization (BootstrapFewShot + MIPROv2) and evaluation
 
 Optimized DSPy programs saved in [`dspy_optimized/`](dspy_optimized/).
